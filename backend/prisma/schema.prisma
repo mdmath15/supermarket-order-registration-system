@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum CartStatus {
+  PENDING
+  COMPLETED
+}
+
+model Product {
+  id        Int    @id @default(autoincrement())
+  name      String
+  price     Int
+  qty_stock Int
+  carts     Cart[] @relation("cart_products")
+
+  @@map("product")
+}
+
+model Cart {
+  id           Int        @id @default(autoincrement())
+  client_name  String
+  deliver_date DateTime
+  value        Int?
+  status       CartStatus @default(PENDING)
+  products     Product[]  @relation("cart_products")
+
+  @@map("cart")
+}
