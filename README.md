@@ -1,7 +1,7 @@
 # Supermarket Order Registration System
 
 ## About the Project
-This project, developed as part of a technical test for Shopper.com.br, is a system designed for the registration and management of supermarket orders. Its aim is to provide an application that allows users to register orders, including details like the customer's name, delivery date, and a detailed shopping list. The system is built using Javascript, Typescript, React and Node.js, showcasing programming skills and system design capabilities.
+This project, developed as part of a technical test for Shopper.com.br, is a system designed for the registration and management of supermarket orders. Its aim is to provide an application that allows users to register orders, including details like the customer's name, delivery date, and a detailed shopping list. The system is built using Javascript, Typescript, React, Next.js, Styled-components, Express and Prysma, showcasing programming skills and system design capabilities.
 
 ## Features
 - Order Registration: An interface for entering new orders, including the customer's name and delivery date.
